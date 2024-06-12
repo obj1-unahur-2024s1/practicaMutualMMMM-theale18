@@ -8,7 +8,7 @@ class Socio {
   method actividadesEsForzadas() = actividades.filter( {a=>a.implicaEsfuerzo()} )
   method realizarActividad(unaActividad) {
     if(actividades.size() == maximoActividades) {
-        self.error("Llego al maximo de Actividades")
+      self.error("Llego al maximo de Actividades")
     }
   }
 }
