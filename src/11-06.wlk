@@ -25,10 +25,24 @@ class ExcursionTropical inherits ExcursionACiudad {
 	override method diasDeActividad() = super() + 1
 	override method sirveParaBroncearse() = true
 }
-class SalidaTrekking inherits Viaje {
+class SalidaTrekking inherits Actividad {
 	var property cantKmsSenderos
 	const property diasDeSolAlAnio
-	override method diasDeActividad() = 
-	override method implicaEsEsfuerzo() = 
+	override method diasDeActividad() = cantKmsSenderos / 50
+	override method implicaEsEsfuerzo() = cantKmsSenderos > 80
 	override method sirveParaBroncearse() = 
+		diasDeSolAlAnio > 200 or (diasDeSolAlAnio.between(100,200) and cantKmsSenderos > 120)
+	override method esInteresante() = super() and diasDeSolAlAnio > 140
+}
+class ClaseDeGimanasia inherits Actividad {
+	method initialize() {
+		if(idiomas!=#{"español"}) {
+			self.error("solo se permite clase de gimnasia en español")
+		}
+	}
+	override method diasDeActividad() = 1
+	override method implicaEsEsfuerzo() = true
+	override method sirveParaBroncearse() = false
+
+	 
 }
