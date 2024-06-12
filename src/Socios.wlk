@@ -25,5 +25,5 @@ class SocioCoherente inherits Socio {
     }
 }
 class SocioRelajado inherits Socio {
-    override method leAtrae(unaActividad) = unaActividad.
+    override method leAtrae(unaActividad) = not idiomas.intersection(unaActividad.idiomas()).isEmpty()
 }
