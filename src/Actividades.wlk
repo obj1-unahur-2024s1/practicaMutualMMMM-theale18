@@ -1,3 +1,5 @@
+import Socios.*
+
 class Viaje {
 	const property idiomas = #{}
 
