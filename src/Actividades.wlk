@@ -10,7 +10,7 @@ class Viaje {
 	method esInteresante() = idiomas.size > 1
 // Se cumple el Mensaje esInteresante si la cantidad de Idiomas es Mayor a 1
 	method esRecomdadaPara(unSocio) {
-		return self.esInteresante()  and unSocio.leAtrae(self) and not unSocio.realizoActividad(self)
+		return self.esInteresante() and unSocio.leAtrae(self) and not unSocio.realizoActividad(self)
 	}
 }
 class ViajeDePlaya inherits Viaje {
@@ -48,7 +48,8 @@ class ClaseDeGimanasia inherits Actividad {
 // en este caso valida si dentro del Conjunto "idiomas" tiene "español", sino lo tiene da ERRROR
 	method initialize() {
 		if(idiomas!=#{"español"}) {
-			self.error("solo se permite clase de gimnasia en español")
+// Conjunto "idiomas" ==> #{ "", "" }
+			self.error("ERROR, solo se permite clase de gimnasia en Español")
 		}
 	}
 	override method diasDeActividad() = 1
