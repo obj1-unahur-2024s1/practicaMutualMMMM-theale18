@@ -15,7 +15,6 @@ class Viaje {
 }
 class ViajeDePlaya inherits Viaje {
 // inherits es para Heredar los method de la Clase Viaje
-// sirve como una reutilizacion de sus nombres
 	const property largoPlaya
 	override method diasDeActividad() = largoPlaya / 500
 	override method implicaEsEsfuerzo() = largoPlaya > 1200
@@ -26,6 +25,7 @@ class ExcursionACiudad inherits Viaje {
 	var property cantAtracciones
 	override method diasDeActividad() = cantAtracciones/ 2
 	override method implicaEsEsfuerzo = cantAtraaciones.between(5,8)
+//					    cantAtracciones es entre 5 y 8
 	override method sirveParaBroncearse() = false
 	override method esInteresante() = super() or cantAtracciones == 5
 }
