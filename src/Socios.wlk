@@ -15,15 +15,19 @@ class Socio {
             actividades.add(unaActividad)
     }
     method leAtrae(unaActividad)
+	method realizoActividad(unaActividad) = actividades.contains(unaActividad)
 }
+
 class SocioTranquilo inherits Socio {
     override method leAtrae(unaActividad) = unaActividad.diasDeActividad() >= 4
 }
+
 class SocioCoherente inherits Socio {
     override method leAtrae(unaActividad) {
         if(self.esAdoradorDelSol()) unaActividad.sirveParaBroncearse() else unaActividad.implicasEsfuerzo()
     }
 }
+
 class SocioRelajado inherits Socio {
     override method leAtrae(unaActividad) = not idiomas.intersection(unaActividad.idiomas()).isEmpty()
 }
