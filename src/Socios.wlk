@@ -3,6 +3,14 @@ import Actividades.*
 class Socio {
     const actividades = []
     var property maximoActividades
+/**	method maximoActividades(){	return maximoActividades }
+	method maximoActividades(unValor){	maximoActividades = unValor	}
+**/
+
+
+
+
+
     var edad
     const idiomas =  #{}
 
