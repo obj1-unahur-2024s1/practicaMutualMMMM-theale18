@@ -57,7 +57,7 @@ class ClaseDeGimanasia inherits Actividad {
 	override method sirveParaBroncearse() = false 
 }
 
-//						BONUS FINAL
+//____________________________________________________BONUS FINAL________________________________________________________________________
 class TallerLiterario{
     const librosEnQueTrabaja = #{}
 	
