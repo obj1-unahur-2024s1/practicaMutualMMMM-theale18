@@ -9,8 +9,7 @@ class Socio {
 	method maximoActividades(unValor){	
 		maximoActividades = unValor	
 	}									**/
-
-var edad
+	var edad
     const idiomas =  #{}
 
     method esAdoradorDelSol() = actividades.all( {a=>a.sirveParaBroncearse()} )
