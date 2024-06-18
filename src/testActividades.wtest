@@ -1,24 +1,29 @@
 import Actividades.*
 
-//	Identificamos a un conjunto de tests con la palabra reservada describe 
+/** Identificamos a un conjunto de tests con la palabra reservada describe */
 describe "Test de viaje de playa"{
 	
-	const viajeDePlaya1 = new ViajeDePlaya(idiomas = #{"Espaniol","Aleman","Ingles"},largoPlaya = 500)
-//	
+	const viajeDePlaya1 = 
+	new ViajeDePlaya(idiomas = #{"Espaniol","Aleman","Ingles"},largoPlaya = 500)
+/**	viajesDePlaya1 hace referencia a ViajeDePlaya de Actividades.wlk
+	idiomas=#{} --> class Viaje{}
+	largoPlaya --> class ViajeDePlaya{} --> class Viaje{}			*/
+
 
 	test "El idioma del viaje de playa debe ser espaniol, aleman e ingles"{
 		assert.equals( #{"Espaniol","Aleman","Ingles"}, viajeDePlaya1.idiomas() )
-//	equals: en 1° lugar va el valor que se espera que retorne el mensaje que va en 2° lugar
-//	assert.equals( 1° , 2° )
+/**	viajeDePlaya1.idiomas()		*/
 	}
 	
 	test "La cantidad de dias de los viajes de playa deben ser 1"{
 		assert.equals(1, viajeDePlaya1.diasDeActividad())
+/**	equals: en 1° lugar va el valor que se espera que retorne el mensaje que va en 2° lugar
+	assert.equals( 1° , 2° )							*/
 	}
 	
 	test "El viaje no debe de implicar esfuerzo"{
 		assert.notThat(viajeDePlaya1.implicaEsfuerzo())
-//	notThat: se espera que la respuesta sea FALSE
+/**	notThat: se espera que la respuesta sea FALSE		*/
 	}
 	
 	test "El viaje debe servir para broncearse"{
@@ -27,7 +32,7 @@ describe "Test de viaje de playa"{
 	
 	test "El viaje deberia ser interesante"{
 		assert.that(viajeDePlaya1.esInteresante())
-//	that: se espera que la respuesta sea TRUE
+/**	that: se espera que la respuesta sea TRUE			*/
 	}
 }
 
