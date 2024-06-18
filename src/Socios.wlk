@@ -11,8 +11,8 @@ class Socio {
 		maximoActividades = unValor	
 	}									
 **/
-	var edad
-    const idiomas =  #{}
+	var property edad
+	const property idiomas = #{}
 
     method esAdoradorDelSol() = actividades.all( {a=>a.sirveParaBroncearse()} )
 //	a.sirveParaBroncearse hace referencia a Actividad.wlk => actividades.sirveParaBroncearse
