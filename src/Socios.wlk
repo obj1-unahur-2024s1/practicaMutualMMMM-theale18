@@ -2,17 +2,20 @@ import Actividades.*
 
 class Socio {
     const actividades = []
-    var property maximoActividades		/**	
+    var property maximoActividades		
+/**	
 	method maximoActividades(){	
 		return maximoActividades 
 	}
 	method maximoActividades(unValor){	
 		maximoActividades = unValor	
-	}									**/
+	}									
+**/
 	var edad
     const idiomas =  #{}
 
     method esAdoradorDelSol() = actividades.all( {a=>a.sirveParaBroncearse()} )
+//	a.sirveParaBroncearse hace referencia a Actividad.wlk => actividades.sirveParaBroncearse
     method actividadesEsForzadas() = actividades.filter( {a=>a.implicaEsfuerzo()} )
     method realizarActividad(unaActividad) {
         if(actividades.size() == maximoActividades) {
