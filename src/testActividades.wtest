@@ -4,7 +4,8 @@ import Actividades.*
 describe "Test de viaje de playa"{
 	
 	const viajeDePlaya1 = new ViajeDePlaya(idiomas = #{"Espaniol","Aleman","Ingles"},largoPlaya = 500)
-	
+//	
+
 	test "El idioma del viaje de playa debe ser espaniol, aleman e ingles"{
 		assert.equals( #{"Espaniol","Aleman","Ingles"}, viajeDePlaya1.idiomas() )
 //	equals: en 1° lugar va el valor que se espera que retorne el mensaje que va en 2° lugar
